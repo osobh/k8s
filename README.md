@@ -21,7 +21,7 @@ Lets use Namespaces, and to do this we first create a namespace file for this st
 
 `kubectl create -f namespace.yml`
 
-Once complete we are now ready to dpeloy our simeple ticker app. We then launch our collection of containers by starting off a Redis server, an API server, and a counter to poll the API.
+Once complete we are now ready to deploy our simple ticker app. We then launch our collection of containers by starting off a Redis server, an API server, and a counter to poll the API.
 
 `kubectl create -f ticker.yml`
 
