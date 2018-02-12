@@ -33,3 +33,8 @@ We can check to see if this is correctly deployed by checking the logs on this n
 
 # ScaledApp
 This is a N-Tier structured app
+
+What we will create here will be the following:
+- Data Tier (Redis) - Pod & Service
+- App Tier (Server) - Pod & Service
+- Support Tier (Poller & Counter) - Pod - 2 containers

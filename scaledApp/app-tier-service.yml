@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: app-pod
+spec:
+ selector:
+     app: ticker
+     tier: app
+ ports:
+     - name: server
+       protocol: TCP
+       port: 8080

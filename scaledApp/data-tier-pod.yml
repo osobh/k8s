@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: redis-pod
+    labels:
+      app: ticker
+      tier: data
+spec:
+ containers:
+   - name: redis
+     image: "redis:latest"
+     imagePullPolicy: IfNotPresent
+     ports:
+       - containerPort: 6379
+         protocol: TCP
