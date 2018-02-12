@@ -20,10 +20,10 @@ In K8's Namespaces can be thought of as virtual clusters.
 Lets use Namespaces and play big, and to do this we first create a namespace file for this stack that will provide a clear scope for our application.
 
 Our SingleApp will simply start off a Redis server, an API server, and a counter to poll the API. We can check to see if this is correctly deployed by checking the logs on this namespace specific deployment
-
-This command will check and list all the PODS
-`kubectl get pods --namespace=singleapp`
-
+--
+`kubectl create -f namespace.yml`
+--
+`kubectl create -f singleapp.yml`
 ---
 
 # ScaledApp
