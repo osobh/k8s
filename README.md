@@ -25,6 +25,8 @@ Our SingleApp will simply start off a Redis server, an API server, and a counter
 
 `kubectl create -f singleapp.yml`
 
+`kubectl logs ticker -c counter -f --namespace=singleapp`
+
 ---
 
 # ScaledApp
