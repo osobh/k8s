@@ -17,13 +17,15 @@ In K8's Namespaces can be thought of as virtual clusters.
 ---
 
 # SingleApp
-Lets use Namespaces and play big, and to do this we first create a namespace file for this stack that will provide a clear scope for our application.
-
-Our SingleApp will simply start off a Redis server, an API server, and a counter to poll the API. We can check to see if this is correctly deployed by checking the logs on this namespace specific deployment
+Lets use Namespaces, and to do this we first create a namespace file for this stack that will provide a clear scope for our application. We then launch the namespace with:
 
 `kubectl create -f namespace.yml`
 
-`kubectl create -f singleapp.yml`
+Once complete we are now ready to dpeloy our simeple ticker app. We then launch our collection of containers by starting off a Redis server, an API server, and a counter to poll the API.
+
+`kubectl create -f ticker.yml`
+
+We can check to see if this is correctly deployed by checking the logs on this namespace specific deployment.
 
 `kubectl logs ticker -c counter -f --namespace=singleapp`
 
