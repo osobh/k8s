@@ -38,3 +38,15 @@ What we will create here will be the following:
 - Data Tier (Redis) - Pod & Service
 - App Tier (Server) - Pod & Service
 - Support Tier (Poller & Counter) - Pod - 2 containers
+
+To start the process off we will first create out namespace for use:
+
+`kubectl create -f namespace.yml`
+
+We will then start up our lower data tier by starting the data-pod first:
+
+`kubectl create -f data-tier-pod.yml`
+
+We can now start up the data service with the following:
+
+`kubectl create -f data-tier-service.yml`
