@@ -1,6 +1,6 @@
 kind: Namespace
 apiVersion : v1
 metadata:
-   name: tickerspace
+   name: ticker
    labels:
      name: ticker

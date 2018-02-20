@@ -14,4 +14,4 @@ spec:
          protocol: TCP
      env:
        - name: REDIS_URL
-         value: "redis://$(EXAMPLE_DATA_TIER_SERVICE_HOST):(EXAMPLE_DATA_TIER_SERVICE_PORT_REDIS)"
+         value: "redis://$(TICKER_DATA_TIER_SERVICE_HOST):(EXAMPLE_DATA_TIER_SERVICE_PORT_REDIS)"
