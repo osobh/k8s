@@ -4,7 +4,7 @@ metadata:
   name: data-tier-service
 spec:
   selector:
-    app: ticker
+    app: example
     tier: data
   ports:
     - name: redis

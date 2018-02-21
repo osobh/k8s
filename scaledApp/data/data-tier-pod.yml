@@ -3,7 +3,7 @@ kind: Pod
 metadata:
     name: data-tier-pod
     labels:
-      app: ticker
+      app: example
       tier: data
 spec:
  containers:
