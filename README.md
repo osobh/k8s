@@ -1,18 +1,18 @@
-K8's Galore
+Kubernetes Galore
 ======
 Overview:
 
-**Be filled out over time**
+This repo will be filled with all the different pod types of deployments, best practices, and design patterns around Kubernetes.
+
+Refreshers...ahhhhhhh:
 
 Namespaces:
 
-Intended for use in environments with many users spread across multiple teams, or projects. For clusters with a few to tens of users, you should not need to create or think about namespaces at all. Start using namespaces when you need the features they provide.
-
-Namespaces provide a scope for names. Names of resources need to be unique within a namespace, but not across namespaces.
-
-Namespaces are a way to divide cluster resources between multiple users (via resource quota)
+Intended for use in environments with many users spread across multiple teams, or projects. For clusters with a few to tens of users, you should not need to create or think about namespaces at all. Start using namespaces when you need the features they provide. Namespaces provide a scope for names. Names of resources need to be unique within a namespace, but not across namespaces. Namespaces are a way to divide cluster resources between multiple users (via resource quota)
 
 In K8's Namespaces can be thought of as virtual clusters.
+
+Deployments:
 
 ---
 
