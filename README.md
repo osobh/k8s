@@ -35,8 +35,8 @@ We can check to see if this is correctly deployed by checking the logs on this n
 This is a N-Tier structured app
 
 What we will create here will be the following:
-- Data Tier (Redis) - Pod & Service
-- App Tier (Server) - Pod & Service
+- Data Tier (Redis App) - Pod & Service
+- App Tier (Server App) - Pod & Service
 - Support Tier (Poller & Counter) - Pod - 2 containers
 
 To start the process off we will first create out namespace for use:
@@ -50,3 +50,8 @@ We will then start up our lower data tier by starting the data-pod first:
 We can now start up the data service with the following:
 
 `kubectl create -f data-tier-service.yml`
+
+---
+
+# Deployments, Scaling, and Rollouts
+This is a N-Tier structured app
