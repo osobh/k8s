@@ -70,6 +70,10 @@ We can now start up our Application support that will ping and count the replies
 
 `kubectl create -f support-tier-pod.yml`
 
+Logging:
+
+kubectl logs ticker -c counter -f --namespace=ticker
+
 ---
 
 # Deployments, Scaling, and Rollouts

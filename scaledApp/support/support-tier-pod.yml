@@ -3,7 +3,7 @@ kind: Pod
 metadata:
     name: app-support-pod
     labels:
-      app: example
+      app: ticker
       tier: support
 spec:
  containers:
@@ -11,10 +11,10 @@ spec:
      image: "slashdeploy/microservice-example:counter-v1"
      env:
        - name: API_URL
-         value: "http://$(EXAMPLE_APP_TIER_SERVICE_HOST):(EXAMPLE_APP_TIER_SERVICE_PORT_SERVER)"
+         value: "http://$(TICKER_APP_TIER_SERVICE_HOST):(TICKER_APP_TIER_SERVICE_PORT_SERVER)"
 
    - name: poller
      image: "slashdeploy/microservice-example:poller-v1"
      env:
        - name: API_URL
-         value: "http://$(EXAMPLE_APP_TIER_SERVICE_HOST):(EXAMPLE_APP_TIER_SERVICE_PORT_SERVER)"
+         value: "http://$(TICKER_APP_TIER_SERVICE_HOST):(TICKER_APP_TIER_SERVICE_PORT_SERVER)"
