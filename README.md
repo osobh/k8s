@@ -43,6 +43,8 @@ To start the process off we will first create out namespace for use:
 
 `kubectl create -f namespace.yml`
 
+Data Tier:
+
 We will then start up our lower data tier by starting the data-pod first:
 
 `kubectl create -f data-tier-pod.yml`
@@ -50,6 +52,23 @@ We will then start up our lower data tier by starting the data-pod first:
 We can now start up the data service with the following:
 
 `kubectl create -f data-tier-service.yml`
+
+
+App Tier:
+
+We will then start up our Application tier by starting the app-pod first:
+
+`kubectl create -f app-tier-pod.yml`
+
+We can now start up the Application service with the following:
+
+`kubectl create -f app-tier-service.yml`
+
+Support Tier:
+
+We can now start up our Application support that will ping and count the replies to our application.
+
+`kubectl create -f support-tier-pod.yml`
 
 ---
 
