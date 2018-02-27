@@ -8,7 +8,7 @@ metadata:
 spec:
  containers:
    - name: server
-     image: "slashdeploy/microservice-example:server-v1"
+     image: "slashdeploy/microservice-example:server-v2"
      ports:
        - containerPort: 6379
          protocol: TCP

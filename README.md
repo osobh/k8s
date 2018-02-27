@@ -6,6 +6,16 @@ This repo will be filled with all the different pod types of deployments, best p
 
 Refreshers...ahhhhhhh:
 
+First portion will cover :
+
+- namespaces
+- multi-container pods
+- interpod-networking
+- service discovery
+- fetching logs
+
+---
+
 Namespaces:
 
 Intended for use in environments with many users spread across multiple teams, or projects. For clusters with a few to tens of users, you should not need to create or think about namespaces at all. Start using namespaces when you need the features they provide. Namespaces provide a scope for names. Names of resources need to be unique within a namespace, but not across namespaces. Namespaces are a way to divide cluster resources between multiple users (via resource quota)
@@ -14,6 +24,7 @@ In K8's Namespaces can be thought of as virtual clusters.
 
 Deployments:
 
+You describe a desired state in a Deployment object, and the Deployment controller changes the actual state to the desired state at a controlled rate. You can define Deployments to create new ReplicaSets, or to remove existing Deployments and adopt all their resources with new Deployments.
 ---
 
 # SingleApp

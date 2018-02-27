@@ -8,13 +8,13 @@ metadata:
 spec:
  containers:
    - name: counter
-     image: "slashdeploy/microservice-example:counter-v1"
+     image: "slashdeploy/microservice-example:counter-v2"
      env:
        - name: API_URL
          value: "http://$(TICKER_APP_TIER_SERVICE_HOST):(TICKER_APP_TIER_SERVICE_PORT_SERVER)"
 
    - name: poller
-     image: "slashdeploy/microservice-example:poller-v1"
+     image: "slashdeploy/microservice-example:poller-v2"
      env:
        - name: API_URL
          value: "http://$(TICKER_APP_TIER_SERVICE_HOST):(TICKER_APP_TIER_SERVICE_PORT_SERVER)"
