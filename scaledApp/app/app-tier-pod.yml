@@ -8,10 +8,10 @@ metadata:
 spec:
  containers:
    - name: server
-     image: "slashdeploy/microservice-example:server-v2"
+     image: "slashdeploy/microservice-example:server-v1"
      ports:
        - containerPort: 8080
          protocol: TCP
      env:
        - name: REDIS_URL
-         value: "redis://$(DTSERVICE_SERVICE_HOST):(DTSERVICE_SERVICE_PORT_REDIS)"
+         value: "redis://127.0.0.1:6379"
