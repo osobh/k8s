@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# This is a program that keeps your address book up to date.
+# This is a program that will launch some of the example repos for you.
 
-friends="/var/tmp/michel/friends"
-
-echo "Hello, "$USER".  This script will help you launch a Kubernetes App"
+echo "Hello, "$USER".  This script will help you launch one of our Kubernetes Apps"
 
 echo -n "Enter your name and press [ENTER]: "
 read name
