@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-    name: data-pod
+    name: example-data-tier
     labels:
-      app: ticker
+      app: example
       tier: data
 spec:
  containers:

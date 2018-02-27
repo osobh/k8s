@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dtservice
+  name: example-data-tier
 spec:
   selector:
-    app: ticker
+    app: example
     tier: data
   ports:
     - name: redis
       protocol: TCP
       port: 6379
-      targetPort: 6379
+      
