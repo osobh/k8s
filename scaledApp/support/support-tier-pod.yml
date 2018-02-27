@@ -11,10 +11,10 @@ spec:
      image: "slashdeploy/microservice-example:counter-v2"
      env:
        - name: API_URL
-         value: "http://$(TICKER_APP_TIER_SERVICE_HOST):(TICKER_APP_TIER_SERVICE_PORT_SERVER)"
+         value: "http://$(APPSERVICE_SERVICE_HOST):(APPSERVICE_SERVICE_PORT_SERVER)"
 
    - name: poller
      image: "slashdeploy/microservice-example:poller-v2"
      env:
        - name: API_URL
-         value: "http://$(TICKER_APP_TIER_SERVICE_HOST):(TICKER_APP_TIER_SERVICE_PORT_SERVER)"
+         value: "http://$(APPSERVICE_SERVICE_HOST):(APPSERVICE_SERVICE_PORT_SERVER)"
