@@ -10,8 +10,8 @@ spec:
    - name: server
      image: "slashdeploy/microservice-example:server-v2"
      ports:
-       - containerPort: 6379
+       - containerPort: 8080
          protocol: TCP
      env:
        - name: REDIS_URL
-         value: "redis://$(TICKER_DATA_TIER_SERVICE_HOST):(TICKER_DATA_TIER_SERVICE_PORT_REDIS)"
+         value: "redis://$(DTSERVICE_SERVICE_HOST):(DTSERVICE_SERVICE_PORT_REDIS)"
