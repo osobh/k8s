@@ -1,0 +1,38 @@
+############################################
+# NOTE: This file is managed by Terraform  #
+# Don't make any manual modification to it #
+############################################
+apiVersion: kops/v1alpha2
+kind: Cluster
+metadata:
+  creationTimestamp: 2017-08-07T00:00:00Z
+  name: ${cluster_name}
+spec:
+ [...]
+ configBase: s3://${kops_state_store}/${cluster_name}
+ sshAccess:
+    - ${vpc_cidr}
+    - YOUR_CORPORATE_NET1
+    - YOUR_CORPORATE_NET2
+    - [...]
+  kubernetesApiAccess:
+    - ${vpc_cidr}
+    - YOUR_CORPORATE_NET1
+    - YOUR_CORPORATE_NET2
+    - [...]
+  kubernetesVersion: ${k8s_version}
+  masterInternalName: api.internal.${cluster_name}
+  masterPublicName: api.${cluster_name}
+  networkCIDR: ${vpc_cidr}
+  networkID: ${vpc_id}
+  networking:
+    weave: {}
+  nonMasqueradeCIDR: 100.64.0.0/10
+  subnets: subnets:
+  - cidr : ${priv_subnet_cidr_1}
+    name: mysubnet-${priv_subnet_az_1}
+    type: Private
+    id: ${priv_subnet_id_1}
+    zone: ${priv_subnet_az_1}
+    egress: ${nat_gw_id_1}
+    
